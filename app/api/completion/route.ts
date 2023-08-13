@@ -17,7 +17,8 @@ export async function POST(req: Request) {
   const response = await openai.createCompletion({
     model: "text-davinci-003",
     stream: true,
-    temperature: 0.6,
+    temperature: 0.9,
+    max_tokens: 100,
     prompt: `Create three slogans for a business with unique features.
  
 Business: Bookstore with cats
