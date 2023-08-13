@@ -3,7 +3,7 @@
 import { useCompletion } from "ai/react";
 
 export default function SloganGenerator() {
-  const { completion, input, handleInputChange, handleSubmit } =
+  const { completion, input, handleInputChange, handleSubmit, isLoading } =
     useCompletion();
 
   return (
@@ -16,7 +16,10 @@ export default function SloganGenerator() {
           onChange={handleInputChange}
         />
       </form>
-      <div className="whitespace-pre-wrap my-6">{completion}</div>
+      <div className="whitespace-pre-wrap my-6">
+        {isLoading && <div>Thinking...</div>} {/* Loading state */}
+        {completion}
+      </div>
     </div>
   );
 }
