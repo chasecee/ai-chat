@@ -7,7 +7,7 @@ export default function SloganGenerator() {
     useCompletion();
 
   return (
-    <div className="mx-auto w-full max-w-md py-24 flex flex-col stretch">
+    <div className="mx-auto w-full max-w-[30rem] py-24 flex flex-col stretch">
       <h1 className="text-2xl">Slogan generator</h1>
       <form onSubmit={handleSubmit}>
         <input
