@@ -2,7 +2,7 @@
 
 import { useCompletion } from "ai/react";
 import Header from "./components/Header";
-import { SetStateAction, useState } from "react";
+import { useState } from "react";
 import Loading from "./components/Loading";
 
 export default function SloganGenerator() {
@@ -66,9 +66,9 @@ export default function SloganGenerator() {
           </div>
         </form>
         <div className="whitespace-pre-wrap my-6 ">
-          <div className="text-xl font-bold text-center leading-10 ">
+          <div className="text-2xl font-bold text-center leading-10 ">
             {isLoading && (
-              <div className="opacity-50">
+              <div className="text-xl opacity-50 flex gap-0 flex-row w-full items-center justify-center">
                 <Loading />
                 Thinking...
               </div>
