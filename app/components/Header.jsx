@@ -9,7 +9,9 @@ export default function Header() {
         className="flex gap-3 items-center text-black dark:text-gray-200"
       >
         <FaLightbulb className="fill-yellow-600 text-xl" />
-        <h1 className="text-[1.2rem] font-[550] ">Slogan generator</h1>
+        <h1 className="text-[1.2rem] font-[550] leading-4 ">
+          Slogan generator
+        </h1>
       </Link>
       <Link href="https://chasecee.com" className="flex gap-3 items-baseline">
         <span className="sr-only">By Chase Cee</span>

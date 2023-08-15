@@ -24,10 +24,10 @@ export default function SloganGenerator() {
       <Header />
       <div className="mx-auto w-full max-w-[30rem] py-24 flex flex-col stretch">
         <form onSubmit={handleSubmit}>
-          <div className="fixed bottom-8">
-            <div className="flex flex-col gap-6 w-full">
+          <div className="fixed bottom-8 max-w-full">
+            <div className="flex flex-col gap-6 w-[30rem] max-w-full px-4 ">
               <input
-                className="w-[30rem] max-w-full border border-gray-300 rounded-xl shadow-xl px-4 py-2 bg-white dark:bg-gray-800"
+                className="w-full border border-gray-300 rounded-xl shadow-xl px-4 py-2 bg-white dark:bg-gray-800"
                 value={input}
                 placeholder="Describe your business or brand..."
                 onChange={handleInputChange}
