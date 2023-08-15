@@ -33,7 +33,7 @@ const openai = new OpenAIApi(openAIConfig);
 export const runtime = "edge";
 
 export async function POST(req: Request) {
-  const { prompt } = await req.json();
+  const { prompt, temperature } = await req.json();
 
   // Log the entry
   const insertResponse = await supabase
@@ -65,14 +65,18 @@ export async function POST(req: Request) {
   const response = await openai.createCompletion({
     model: "text-davinci-003",
     stream: true,
-    temperature: 0.9,
+    temperature: temperature,
     max_tokens: 100,
     prompt: `Create three slogans for a business with unique features.
  
 Business: Bookstore with cats
-Slogans: "Purr-fect Pages", "Books and Whiskers", "Novels and Nuzzles"
+Slogans: "Purr-fect Pages", 
+"Books and Whiskers", 
+"Novels and Nuzzles"
 Business: Gym with rock climbing
-Slogans: "Peak Performance", "Reach New Heights", "Climb Your Way Fit"
+Slogans: "Peak Performance", 
+"Reach New Heights", 
+"Climb Your Way Fit"
 Business: ${prompt}
 Slogans:`,
   });
